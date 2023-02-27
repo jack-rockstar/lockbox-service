@@ -1,0 +1,13 @@
+[
+  {
+    "id": "87c340f1-1526-4d87-8c3f-d4f299fa08e3",
+    "user_id": "5152d6fa-ca8a-4977-acf8-e81a8a799889",
+    "typeAccount": {
+      "id": 2,
+      "description": "Inicio de sesion"
+    },
+    "username": "jacknajarro1@gmail.com",
+    "password": "JacknajarrO4555",
+    "secretPassword": "jack123"
+  }
+]
