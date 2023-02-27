@@ -5,7 +5,7 @@ import { randomUUID } from 'node:crypto'
 export const getUsers = (req, res) => {
   try {
     logInfo('API [getUsers]...')
-    return res.status(200).json(USERS)
+    return res.status(200).json({ status: 200, message: 'correct operation', data: USERS })
   } catch (error) {
     logError('Error API [getUsers]')
     logError(error)
@@ -19,8 +19,8 @@ export const getUserById = (req, res) => {
     const userFound = USERS.filter(user => user.id === Number(id))
 
     return userFound
-      ? res.status(200).json(userFound)
-      : res.status(404).json({ message: 'user not found' })
+      ? res.status(200).json({ status: 200, message: 'correct operation', data: userFound })
+      : res.status(404).json({ status: 404, message: 'user not found', data: [] })
   } catch (error) {
     logError('Error API [getUserById]')
     logError(error)
@@ -34,17 +34,16 @@ export const createUser = async (req, res) => {
     const { name, lastName, correo } = req.body
     if (!name || !lastName || !correo) {
       logError('Incomplete data')
-      return res.status(400).json({ status: 400, message: 'Incomplete data' })
+      return res.status(400).json({ status: 400, message: 'Incomplete data', data: [] })
     }
     const newUser = {
-      // id: randomUUID(),
       name,
       lastName,
       correo
     }
     const user = await createUserDb(newUser)
     logSuccess(`User created ${JSON.stringify(user)}`)
-    return res.status(200).json(user)
+    return res.status(200).json({ status: 200, message: 'correct operation', data: user })
   } catch (error) {
     logError('Error API [createUser]')
     logError(error)

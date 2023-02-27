@@ -15,3 +15,4 @@ export const writeDbFile = async (dbName, data) => {
 
 export const USERS = await readDbFile('users')
 export const ACCOUNTS = await readDbFile('accounts')
+export const SAFE_BOX = await readDbFile('safeBox')

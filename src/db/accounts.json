@@ -1,11 +1,7 @@
 [
   {
-    "id": "87c340f1-1526-4d87-8c3f-d4f299fa08e3",
-    "user_id": "5152d6fa-ca8a-4977-acf8-e81a8a799889",
-    "typeAccount": {
-      "id": 2,
-      "description": "Inicio de sesion"
-    },
+    "id": "e4c669f0-d6bb-47ae-aeec-5ef4492dec2b",
+    "user_id": "29babf6c-3d35-4f3d-9038-fc050ba59370",
     "username": "jacknajarro1@gmail.com",
     "password": "JacknajarrO4555",
     "secretPassword": "jack123"
