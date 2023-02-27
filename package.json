@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "nodemon": "2.0.20",
-    "picocolors": "^1.0.0",
+    "picocolors": "1.0.0",
     "standard": "17.0.0"
   },
   "eslintConfig": {
