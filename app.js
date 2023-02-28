@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import routes from './src/routes/lockbox.js'
+import { logInfo } from './src/utils/logs.js'
 
 const app = express()
 const corsOptions = {
@@ -18,5 +19,5 @@ app.use('/lockbox/', routes)
 const port = 3001 || process.env.port
 
 app.listen(port, () => {
-  console.log(`Server is running in ${port}`)
+  logInfo(`Server is running in ${port}`)
 })
