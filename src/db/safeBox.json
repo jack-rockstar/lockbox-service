@@ -1,21 +1,7 @@
 [
   {
-    "id": "9eddc97f-a0eb-4c88-8a03-805036eb4bda",
-    "user_id": "29babf6c-3d35-4f3d-9038-fc050ba59370",
-    "typeAccount": {
-      "id": 1,
-      "description": "Inicio de sesion"
-    },
-    "nameBox": "Facebook",
-    "passwordBox": "jack123",
-    "url": [
-      "https://www.facebook.com/",
-      "https://myaccount.google.com/?utm_source=chrome-profile-chooser&pli=1"
-    ],
-    "grades": "Estas contraseñas me sirve para poder ingresar a mi gmail, facebook"
-  },
-  {
-    "id": "92600153-fd68-43f4-9899-115221e889ac",
+    "id": "ad814f31-35f2-40a8-aff0-1dc59ccd7b4e",
+    "creationDate": "2023-02-27T21:50:36.772-05:00",
     "user_id": "29babf6c-3d35-4f3d-9038-fc050ba59370",
     "typeAccount": {
       "id": 1,

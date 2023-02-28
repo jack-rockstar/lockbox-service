@@ -1,6 +1,7 @@
 import { SAFE_BOX, USERS, writeDbFile } from '../utils/jsonUtils.js'
 import { logError, logInfo } from '../utils/logs.js'
 import { randomUUID } from 'node:crypto'
+import { DateTime } from 'luxon'
 
 export const createSafeBox = async (req, res) => {
   try {
@@ -35,7 +36,7 @@ export const getSafesBox = async (req, res) => {
 
 export const createSafeBoxDb = async (newSafeBox) => {
   logInfo('>>> Creating safeBox')
-  newSafeBox = { id: randomUUID(), ...newSafeBox }
+  newSafeBox = { id: randomUUID(), creationDate: DateTime.local().toISO(), ...newSafeBox }
   const newSafesBox = [...SAFE_BOX, newSafeBox]
   await writeDbFile('safeBox', newSafesBox)
   logInfo('>>> Safebox created')
