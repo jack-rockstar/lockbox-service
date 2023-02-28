@@ -10,7 +10,9 @@ const corsOptions = {
 
 app.use(express.json())
 app.use(cors(corsOptions))
-
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Service working correctly' })
+})
 app.use('/lockbox/', routes)
 
 const port = 3001 || process.env.port

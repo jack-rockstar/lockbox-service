@@ -5,10 +5,6 @@ import { createUser, getUserById, getUsers } from '../services/users.js'
 
 const routes = Router()
 
-routes.get('/', (req, res) => {
-  res.status(200).json({ message: 'Service working correctly' })
-})
-
 routes.get('/users', getUsers)
 routes.get('/users/:id', getUserById)
 routes.post('/user', createUser)
