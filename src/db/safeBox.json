@@ -2,7 +2,7 @@
   {
     "id": "ad814f31-35f2-40a8-aff0-1dc59ccd7b4e",
     "creationDate": "2023-02-27T21:50:36.772-05:00",
-    "user_id": "29babf6c-3d35-4f3d-9038-fc050ba59370",
+    "userId": "29babf6c-3d35-4f3d-9038-fc050ba59370",
     "typeAccount": {
       "id": 1,
       "description": "Inicio de sesion"

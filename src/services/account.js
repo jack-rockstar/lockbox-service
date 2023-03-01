@@ -7,7 +7,7 @@ export const getAccountByUserId = (req, res) => {
   try {
     logInfo('API [getAccountByUserId]...')
     const { id } = req.params
-    const accountUser = ACCOUNTS.filter(account => account.user_id === id)
+    const accountUser = ACCOUNTS.filter(account => account.userId === id)
     if (accountUser.length < 1) {
       return res.status(404).json({ status: 404, message: 'user not found', data: [] })
     }
@@ -33,7 +33,7 @@ export const createAccount = async (req, res) => {
       return res.status(400).json({ status: 400, message: 'user creation error' })
     }
 
-    const accountSuccess = await createAccountDb({ user_id: userSuccess.id, ...newAccount })
+    const accountSuccess = await createAccountDb({ userId: userSuccess.id, ...newAccount })
     return res.status(200).json({ status: 200, message: 'correct operation', data: accountSuccess })
   } catch (error) {
     logError('Error API [createAccount]')
